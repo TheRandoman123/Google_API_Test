@@ -1,22 +1,4 @@
-<html>
-  <head>
-  <script type="text/javascript" src="script.js"></script>
-  <link href="style.css" rel="stylesheet" type="text/css" />  
-  </head>
-  <body>
-    <!--
-    BEFORE RUNNING:
-    ---------------
-    1. If not already done, enable the Google Sheets API
-       and check the quota for your project at
-       https://console.developers.google.com/apis/api/sheets
-    2. Get access keys for your application. See
-       https://developers.google.com/api-client-library/javascript/start/start-js#get-access-keys-for-your-application
-    3. For additional information on authentication, see
-       https://developers.google.com/sheets/api/quickstart/js#step_2_set_up_the_sample
-    -->
-    <script>
-    function makeApiCall() {
+function makeApiCall() {
         var params = {
         // The ID of the spreadsheet to retrieve data from.
         spreadsheetId: '1N3oLmAwd_vTWA-q-rjE4lt9rDVK6o92ZxSDmT_uBlhw',  // TODO: Update placeholder value.
@@ -49,12 +31,6 @@
 
       var CLIENT_ID = '985219042048-n8grlp332b368s93driroe529tn9vj9q.apps.googleusercontent.com';  // TODO: Update placeholder with desired client ID.
 
-      // TODO: Authorize using one of the following scopes:
-      //   'https://www.googleapis.com/auth/drive'
-      //   'https://www.googleapis.com/auth/drive.file'
-      //   'https://www.googleapis.com/auth/drive.readonly'
-      //   'https://www.googleapis.com/auth/spreadsheets'
-      //   'https://www.googleapis.com/auth/spreadsheets.readonly'
       var SCOPE = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 
       gapi.client.init({
@@ -85,12 +61,8 @@
     function handleSignOutClick(event) {
       gapi.auth2.getAuthInstance().signOut();
     }
-    </script>
-    <script async defer src="https://apis.google.com/js/api.js"
+  
+      async defer (src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
-    <button id="signin-button" onclick="handleSignInClick()">Sign in</button>
-    <button id="signout-button" onclick="handleSignOutClick()">Sign out</button>
-  </body>
-</html>
+      onreadystatechange="if (this.readyState === 'complete') this.onload()")
+    
