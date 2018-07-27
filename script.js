@@ -1,10 +1,11 @@
 function makeApiCall() {
         var params = {
+            
         // The ID of the spreadsheet to retrieve data from.
         spreadsheetId: '1N3oLmAwd_vTWA-q-rjE4lt9rDVK6o92ZxSDmT_uBlhw',  // TODO: Update placeholder value.
 
         // The A1 notation of the values to retrieve.
-        range: 'Sheet1',  // TODO: Update placeholder value.
+        range: 'Sheet1'  // TODO: Update placeholder value.
 
         // How values should be represented in the output.
         // The default render option is ValueRenderOption.FORMATTED_VALUE.
@@ -19,7 +20,7 @@ function makeApiCall() {
 
       var request = gapi.client.sheets.spreadsheets.values.get(params);
       request.then(function(response) {
-        // TODO: Change code below to process the `response` object:
+        // Code that process the `response` object:
         console.log(response.result);
       }, function(reason) {
         console.error('error: ' + reason.result.error.message);
@@ -62,7 +63,9 @@ function makeApiCall() {
       gapi.auth2.getAuthInstance().signOut();
     }
   
-      async defer (src="https://apis.google.com/js/api.js"
+      function async defer(){
+      src="https://apis.google.com/js/api.js"
       onload="this.onload=function(){};handleClientLoad()"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()")
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"
+      } 
     
